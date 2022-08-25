@@ -1,0 +1,15 @@
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+ {% if messages %}
+ {% for message in messages %}
+ <div class="alert alert-success" role="alert">
+    <strong>{{ message }}</strong>
+    {% if message.tags %}  {% endif %}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+  </div>
+  
+
+ {% endfor %}
+
+{% endif %}

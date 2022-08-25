@@ -1,0 +1,666 @@
+{% extends 'base.html' %}
+
+{% block title %} Indus Projects | Home {% endblock %}
+
+{% block content %} 
+{% load static %}
+{% include 'messages.html' %}
+<head>
+ 
+</head> 
+<div class="container-fluids pb-5">
+  <div id="demo" class="carousel  slide carousel-fade" data-ride="carousel">
+  
+      <!-- Indicators -->
+      <ul class="carousel-indicators" style="margin-top: 0.8rem;">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+    
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+           <img class="img-fluid rounded" src="{%static 'img/img1.jpg' %}" style="width:100%; height:500px;" alt="bag">
+           <div class="carousel-caption " style="opacity:0.8;;">
+            <h3 class="text-center" style="color:#d42828;">Civil Project</h3>
+            <p>We had such a great team for real estate project</p>
+            <button class="btn-4 ml-3 justify-content-center">
+              <span class="text"><a href="{% url 'website:project' %}" style="text-decoration: none; color: #fff;">our projects</span>
+              </a>
+              </button>
+          </div>
+         
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'img/slide2.jpeg' %}" style="width:100%; height:500px;" alt="men"> 
+          <div id="animate" class="carousel-caption" style="text-decoration: none;">
+            <h1 class="animate__animated animate__backInDown">HP petroleum</h1>
+            <p class="animate__animated animate__lightSpeedInLeft">petrol pump canopy work.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+           <img src="{% static 'img/slide3.jpeg' %}" style="width:100%; height:500px;" alt="gm"> 
+           <div id="animate" class="carousel-caption" style="text-decoration: none;">
+            <h1 class="animate__animated animate__backInDown">Indian oil</h1>
+            <p class="animate__animated animate__lightSpeedInRight">petrol pump canopy work.</p>
+            <div id="cta" class="animate__animated animate__lightSpeedInRight"><i class="fa fa-phone-square" aria-hidden="true"></i> 98765434567</div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+        <span class="carousel-control-prev-icon" ></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    
+    </div>
+  </div>
+  <!-- <div class="container">
+      <h3>Our Projects</h3><hr>
+      <div class="row">
+        {% for prj in product %}
+        <div class="col-sm-12 col-md-6 col-lg-4 pb-4"> 
+          <h5 class="card-title text-center"><a href="{% url 'website:detail' prj.pk %}">{{prj.title}}</a></h5> 
+          <div class="card h-100" style="border:none">
+          <img class="card-img-top" data-target="#exampleModal" src="{{prj.image.url}}" alt="card-img-top" style="width: auto; height: 250px; object-fit: scale-down;">
+          
+            <div class="card-body">
+              <h3 class="card-title text-center"><a href="">{{prj.title}}</a></h3>
+              <h5 class="card-text text-center">{{prj.description|truncatewords:9}}</h5>
+            </div>
+          </div>
+        {% endfor %}
+  
+      
+  </div>
+  </div>
+  </div> -->
+  <div class="container-fluids">
+    <div class="jumbotron">
+      <h3 class="text-center"style="font-size: 3rem;">Welcome <span style="color:#5161ce;font-family: sans-serif,monospace;font-size: 3rem;">Indus Projects India</span></h3>
+      <div class="row">
+        <div class="col-md-6">
+      <p>Indus Project Limited is a professionally managed company with its corporate base in U.P and other states.
+        It has evolved as a prominent engineering and construction company.We undertake several kinds of commercial and 
+        non-commercial projects that include civil construction work such as Buildings, petrol pump.
+      </p>
+      <p>Our Engineers have gained wide experience since the inception of our organisation by
+         offering an excellent quality services to our valuable clients.we have a team of 
+         experienced and professional experts who have excellent exposure.
+      </p>
+      <a href="{% url 'website:contact' %}"><button class="btn-3">Get in touch</button></a>
+    </div>
+    <div class="col-md-6" style="padding-left: 5rem;">
+      <h3 style="font-weight: bold;font-family: sans-serif;color: rgba(255, 0, 0, 0.705);">Key Specifications</h3>
+      <ul>
+      <li> Foundation</li>
+      <li> MS Structure</li>
+      <li> Roofing and False Ceiling</li>
+      <li> Light Fitting</li>
+      <li> RVI Fascia work</li>
+      <li> Logo</li>
+      <li> Water/Air Canopy</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  </div>
+  <!-- services -->
+  <div class="container-s mb-5">
+    <h2>Our Services</h1>
+    <div class="row-s">
+      <div class="service">
+        <i class="fa fa-check-circle"></i>
+        <h3>Foundation</h3>
+        <p>
+         Foundation is designed as per Indian
+        national building code and other relevant IS Code for 
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa fa-check-circle"></i>
+        <h3>Ms Structure</h3>
+        <p>
+           A 14-ton hydra need to erect the whole structure.
+          The skilled manpower play a very important role in
+          this erection. The whole canopy structure erection
+          is done as per part list of the canopy. 
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa fa-check-circle"></i>
+        <h3>Roofing and false ceiling</h3>
+        <p>
+          With parallel to false ceiling
+          work lighting fitting and cabling
+          is also done. Apart form this
+          some work inside the false
+          ceiling is also completed.
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa fa-check-circle"></i>
+        <h3>RVI fascio work</h3>
+        <p>
+          Canopy RVI fascia show the branding of cooperation and differential to
+         other stations. The 3 mm aluminum composite panel are used for
+         canopy branding work. The Milky white, Dark blue, Yellow, Orange etc.
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa fa-check-circle"></i>
+        <h3>Logo</h3>
+        <p>
+          Logo Installed with 3mm ACP sheet with inbuilt light for branding work.
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa fa-check-circle"></i>
+        <h3>Air/Water Canopy</h3>
+        <p>
+          Air canopy is also built as per
+          standard procedure for customer’s
+        convince.
+        Water canopy is widely used to
+         serve water at station which
+         attracts customers . 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id ="heading-title" class="container py-3">
+    <h2 class="text-center">Projects</h2>
+   
+<div class="row">
+{% for p in product %}
+<div class="col-md-4 mt-3" style=" object-fit:scale-down;">
+<div class="card-body" style="box-shadow: 15px 15px 30px #bebebe,
+-15px -15px 30px #ffffff;">
+<h3 class="card-title text-center"><a href="{% url 'website:detail' p.pk %}">{{p.title}}</a></h3>
+<img class="card-image-top" src="{{p.image.url}}" height="300" width="300">
+<h6 class="card-text mt-3 text-center">&#8377;{{p.price}}/- per sq. feet</h6>
+<h6 class="card-text mt-3 text-center" >{{p.description|truncatewords:9}}</h6>
+<button class="btn btn-warning"><a href="{% url 'website:detail' p.pk %}" style="text-decoration: none;color:#fff;">Full Detail</button></a>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+<!--image gallery-->
+<!-- A Lightbox is basically a slider (carousel) inside of a modal.
+
+  Todos: fix active class (when you click on a photo, carousel in modal reverts to first slide) 
+ *solution: added data-slide-to and data-target to imgs
+-->
+<section id="lightbox-gallery" class="mt-5">
+<div  class="container-fluid mt-5">
+  <h3 class="text-center mt-5" style="font-family: 'poppins',sans-serif;font-weight:600;color:#d1d1d1;">Our Gallery</h3>
+  <div class="row mt-3" data-toggle="modal" data-target="#lightbox">
+    <div id="col-photo" class="col-md-4 mt-3 mb-3">
+     <img src="{% static 'img/canopy1.jpg' %}" data-target="#indicators" data-slide-to="0" alt="" />
+    </div>
+    <div id="col-photo" class="col-md-4 mt-3 mb-3 ">
+         <img src="{% static 'img/canopy2.jpg' %}" data-target="#indicators" data-slide-to="1" alt="" />
+    </div>
+    <div id="col-photo" class="col-md-4 mt-3 mb-3">
+       <img src="{% static 'img/canopy1.jpg' %}" data-target="#indicators" data-slide-to="2"  alt="" />
+    </div>
+    <div id="col-photo" class="col-md-4 mt-3 mb-3">
+         <img src="{% static 'img/canopy1.jpg' %}" data-target="#indicators" data-slide-to="3" alt="" />
+    </div>
+    <div id="col-photo" class="col-md-4 mt-3 mb-3">
+         <img src="{% static 'img/canopy1.jpg' %}" data-target="#indicators" data-slide-to="3"  alt="" />
+    </div>
+    <div id="col-photo" class="col-md-4 mt-3 mb-3">
+         <img src="{% static 'img/canopy1.jpg' %}" data-target="#indicators" data-slide-to="4" alt="" />
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="lightbox" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <button type="button" class="close text-right p-2" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        <div id="indicators" class="carousel slide" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#indicators" data-slide-to="0" class="active"></li>
+      <li data-target="#indicators" data-slide-to="1"></li>
+      <li data-target="#indicators" data-slide-to="2"></li>
+      <li data-target="#indicators" data-slide-to="3"></li>
+      <li data-target="#indicators" data-slide-to="4"></li>
+      <li data-target="#indicators" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner">
+      
+      <div class="carousel-item active">
+        
+        <img class="d-block w-100"  src="{% static 'img/canopy1.jpg' %}" alt="First slide">
+        <p>first project</p>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/canopy2.jpg' %}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/canopy1.jpg' %}" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/canopy1.jpg' %}" alt="Fourth slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/canopy1.jpg' %}" alt="Fifth slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/canopy1.jpg' %}" alt="Sixth slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#indicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!--client slides  -->
+<div id ="heading-title" class="container mt-5">
+  <h2  class="text-center">Our Happy Clients</h2>
+  <div class="container-fluids mt-3">
+    <div id="demo1" class="carousel slide" data-ride="carousel">
+    
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo1" data-slide-to="0" class="active"></li>
+          <li data-target="#demo1" data-slide-to="1"></li>
+          <li data-target="#demo1" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h4  class="text-center">Client 1</h4>
+             <div class="col-md-8 mx-auto">
+              <div class="card" style="border: 2px solid #5161ce;">
+                <div class="card-body">
+                  <h4 class="card-title">Mr. Verma</h4>
+                  <img class="card-image-top " src="{% static 'img/img1.jpg' %}" width="100px" style="border-radius: 50%;">
+                  <h5 class="card-text">general Manager of ONGCC.</h5>
+                  <p class="card-text">"We Are very Happy for Indus Projects Services they have given us.
+                    We Are very Happy for Indus Projects Services they have given us."
+ </p><span style="color:#16d4d3"> We are GrateFull for their Services</span>
+                </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <h4 class="text-center">Client2</h4>
+            <div class="col-md-8 mx-auto">
+              <div class="card" style="border: 2px solid #5161ce;">
+                <div class="card-body">
+                  <h4 class="card-title">Mr. Verma</h4>
+                  <img class="card-image-top" src="{% static 'img/img1.jpg' %}" width="100px" style="border-radius: 50%;">
+                  <h5 class="card-text">general Manager of ONGCC.</h5>
+                  <p class="card-text">"We Are very Happy for Indus Projects Services they have given us.
+                    We Are very Happy for Indus Projects Services they have given us."
+ </p><span style="color:#16d4d3"> We are GrateFull for their Services</span>
+                </div>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+             <h4 class="text-center">Client3</h4> 
+             <div class="col-md-8 mx-auto">
+              <div class="card" style="border: 2px solid #5161ce;">
+                <div class="card-body">
+                  <h4 class="card-title">Mr. Verma</h4>
+                  <img class="card-image-top" src="{% static 'img/img1.jpg' %}" width="100px" style="border-radius: 50%;">
+                  <h5 class="card-text">general Manager of ONGCC.</h5>
+                  <p class="card-text">"We Are very Happy for Indus Projects Services they have given us.
+                    We Are very Happy for Indus Projects Services they have given us."
+ </p><span style="color:#16d4d3"> We are GrateFull for their Services</span>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+      
+        <!-- Left and right controls -->
+         <a class="left carousel-control" href="#demo1" data-slide="prev" >
+          <span id="#client-slide"><i class="fa fa-angle-left" aria-hidden="true" style="font-size: 6rem; color:#5161ce;position: relative;top:-150px;"></i></span>
+        </a>
+        <a class="right carousel-control" href="#demo1" data-slide="next">
+          <span id="#client-slide" ><i class="fa fa-angle-right" aria-hidden="true" style="font-size: 6rem; color:#5161ce;float:right;position: relative;top:-150px;"></i></span>
+        </a>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+  <style>
+    .carousel-caption{
+      position: relative;
+      height:17rem;
+      width:13rem;
+      top: 25%;
+      bottom: initial;
+      text-transform: uppercase;
+      background-color: #5161ce;
+    
+ }
+
+.carousel-caption h3{
+  color: rgb(194, 26, 62);
+  font-family: "Roboto",sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.carousel-control-next-icon {
+  color: #020d55;
+}
+ ul {
+   list-style-type: '\2705';
+   padding-right: 0.5rem;
+ }
+ ul li{
+   margin-top: 0.5rem;
+   margin-left: 0.3rem;
+ }
+ ol.carousel-indicators li, ol.carousel-indicators li.active {
+     width: 1rem;
+     height: 1rem;
+     margin: 0;
+     border-radius: 50%;
+     color:#5161ce;
+     border: 0;
+     background: transparent;
+} 
+#heading-title h2{
+  position: relative;
+  padding: 0px 0px 15px;
+}
+
+#heading-title h2::after {
+    content: '';
+    border-bottom: 4px solid #5161ce;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    width: 90px;
+    margin: 0 auto;
+    display: block;
+}
+.btn-3{
+  position: relative;
+  height: 3rem;
+  border: 2px solid #5161ce;
+  transition: .4s ease-in;
+  z-index: 1;
+}
+.btn-3::before,
+.btn-3::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+
+}
+.btn-3:hover {
+  box-shadow: inset -10.5rem 0 0 0
+  #5161ce, inset 10.5rem 0 0  0 #5161ce;
+  color: #fff;
+}
+
+/* .btn-4{
+  position: relative;
+  height: 3rem;
+  border: 2px solid #d42828;
+  transition: .4s ease-in;
+  z-index: 1;
+}
+.btn-4::before,
+.btn-4::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+
+}
+.btn-4:hover {
+  box-shadow: inset -10.5rem 0 0 0
+  #d42828, inset 10.5rem 0 0  0 #d42828;
+  color: #fff;
+} */
+
+/* new-button */
+/* From cssbuttons.io */
+.btn-4 {
+ align-items: center;
+ background-image: linear-gradient(144deg,#a88ebb, #c71d1d 50%,#dc5b2c);
+ border: 0;
+ border-radius: 8px;
+ box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+ box-sizing: border-box;
+ color: #FFFFFF;
+ display: flex;
+ font-family: Phantomsans, sans-serif;
+ font-size: 18px;
+ justify-content: center;
+ line-height: 1em;
+ max-width: 100%;
+ min-width: 140px;
+ padding: 3px;
+ text-decoration: none;
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ white-space: nowrap;
+ cursor: pointer;
+ transition: all .3s;
+}
+
+.btn-4:active,
+.btn-4:hover {
+ outline: 0;
+}
+
+.btn-4 span {
+ background-color: rgb(5, 6, 45);
+ padding: 16px 24px;
+ border-radius: 6px;
+ width: 100%;
+ height: 100%;
+ transition: 300ms;
+}
+
+.btn-4:hover span {
+ background: none;
+}
+
+.btn-4:active {
+ transform: scale(0.9);
+}
+
+  /* image gallery */
+  .lightbox-gallery {
+    background-image: linear-gradient(#5161ce, #d42828);
+    background-repeat: no-repeat;
+    color: #000;
+    overflow-x: hidden
+}
+
+.lightbox-gallery p {
+    color: #fff
+}
+
+.lightbox-gallery h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: #fff
+}
+
+@media (max-width:767px) {
+    .lightbox-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.lightbox-gallery .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 40px
+}
+
+.lightbox-gallery .intro p {
+    margin-bottom: 0
+}
+
+.lightbox-gallery .photos {
+    padding-bottom: 20px
+}
+
+.lightbox-gallery .item {
+    padding-bottom: 30px
+}
+/* gallery lightbox */
+.close {
+  font-size: 1.5rem;
+}
+
+#col-photo img {
+  box-shadow: red;
+  cursor: pointer;
+  margin: 2rem;
+  width: 60%;
+  height: 60%;
+}
+
+#col-photo img:hover {
+  opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#col-photo{
+font-family: Arial, Helvetica, sans-serif;
+
+
+}
+#lightbox-gallery {
+    background-image: linear-gradient(#5161ce, #d42828);
+    background-repeat: no-repeat;
+    color: #000;
+    overflow-x: hidden
+}
+#demo .carousel-indicators {
+    bottom: -50px;
+    padding: 2px;
+    margin-top: 15px;
+
+}
+#demo .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%; 
+  background-color:#5161ce;
+  display: inline-block;
+  margin: 3px; 
+}
+/* services style */
+.container-s {
+  width: 100%;
+  height: 100%;
+  padding: 0px 8%;
+}
+
+.container-s h2 {
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+}
+
+.container-s h2::after {
+  content: '';
+  background: #5161ce;
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.row-s {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.service {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #5161ce;
+}
+
+.service h3 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.service:hover {
+  background: #5161ce;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.service:hover i {
+  color: #fff;
+}
+#animate{
+  background-color: transparent;
+  display: inline-block;
+  width:auto;
+  font-weight:600;
+  left:10%;
+}
+#animate p{
+  color:#950c0c;
+  font-weight: 900
+}
+#cta i{
+  color:#5161ce;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+  </style>
+
+        
+{% endblock %}

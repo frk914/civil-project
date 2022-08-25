@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div  class="container">
+    <div class="card mt-3" style="border-style:none;" >
+        <div class="row no-gutters">
+          <div class="col-md-4 mt-5">
+            <img src="{{blog.image.url}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8 mt-3">
+            <div class="card-body ml-3">
+            <p class="card-text"><small class="text-success">author by: {{blog.author}}</small></p>
+            <p class="card-text"><small class="text-right text-success"><i class="fa fa-comment"aria-hidden="true"></i> {{comments.count}}</small></p>
+            <p class="card-text "><small class="text-success">updated on: {{blog.create|timesince}}</small></p>
+              <h5 class="card-title text-center" style="text-transform: uppercase; color:#5161ce;" >{{blog.title}}</h5>
+             <span id="para-underline"><p class="card-text text-center">{{blog.blog_desc}}</p></span> 
+             
+            </div>
+          </div>
+        </div>
+      </div>
+     
+        <!-- Form to leave comment -->
+  <div class="row mt-5">
+    <div class="col-lg-6 offset-lg-3">
+      <h3>Leave a comment</h3>
+      <form method='POST'>
+        {% csrf_token %}
+        <div class="form-group">
+          <span class="ml-2"></span>{{ form.name.label_tag }}
+          <input type="text" class="form-control {% if form.name.errors %}is-invalid{% endif %}" id="id_name"
+            name="name" value="{{ form.name.value|default:'' }}">
+        </div>
+        <div class="form-group">
+          <span class="ml-2"></span>
+          {{ form.email.label_tag }}
+          <span class="text-muted"><small>(Your email address will not be published)</small></span>
+          <input type="text" class="form-control {% if form.email.errors %}is-invalid{% endif %}" id="id_email"
+            name="email" value="{{ form.email.value|default:'' }}">
+        </div>
+        <div class="form-group">
+          <span class="ml-2"></span>{{ form.content.label_tag }}
+          <textarea class="form-control {% if form.content.errors %}is-invalid{% endif %}" id="id_content"
+            name="content" rows="4">{{ form.content.value|default:'' }}</textarea>
+        </div>
+        <button class="btn btn-primary ml-2" type="submit">Reply</button>
+      </form>
+    </div>
+  </div>
+
+      {% if comments %}
+  <div class="row mt-5">
+    <div class="col-lg-6 offset-lg-3">
+      Comment{{ comments.count|pluralize }}
+      <span class="badge badge-dark ml-2">{{ comments.count }}</span>
+    </div>
+    {% for comment in comments %}
+    <div class="col-lg-6 offset-lg-3 mt-2">
+      <div class="card p-2">
+        <div class="row">
+          <div class="col-12">
+            <strong>{{ comment.name }}</strong> commented
+          </div>
+          <div class="col-12">
+            <p class="m-1 mt-3">{{ comment.content }}</p>
+            <p class="text-right text-muted"><small>{{ comment.created }}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+
+</div>
+
+
+
+<style>
+#heading-title h2{
+  position: relative;
+  padding: 0px 0px 15px;
+}
+#heading-title h2::after {
+    content: '';
+    border-bottom: 4px solid #5161ce;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    width: 130px;
+    margin: 0 auto;
+    display: block;
+}
+#para-underline p{
+    position: relative;
+    padding: 0px 0px 15px;
+}
+#para-underline p::after{
+    content: '';
+    border-bottom: 4px solid #5161ce;
+    position: absolute;
+    bottom: -1.8rem;
+    right: 0px;
+    left: 0px;
+    width: 200px;
+    margin-bottom: 4rem;
+    margin: 0 auto;
+    display: block;
+}
+</style>
+{% endblock %}

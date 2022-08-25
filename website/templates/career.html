@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block title %} INDUS | Career {% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="card">
+    <img src="{% static 'img/career.jpg' %}" width="100%" height="400px;" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h1 class="card-title  text-info mt-5"><strong style="color:#5161ce; font-size:2rem;word-spacing: 1rem;">Indus Career Job</strong></h1>
+      <h2 class="card-title  text-danger" >how to apply</h5>
+      <p class="card-text mt-3"><button class="cssbuttons-io-button"data-toggle="modal" data-target="#exampleModalScrollable"> Get started
+        <div class="icon">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+      </button></p>
+      <p class="card-text text-center text-info"></p>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">Indus Job</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Read how to apply for jobs</h4>
+          <ul class="my-list">
+           <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Intrested candidate should apply for jobs.</li>
+             <li><i class="fa fa-check-square-o" aria-hidden="true"></i>candidate must have knowledge about civil construction. </li>
+             <li><i class="fa fa-check-square-o" aria-hidden="true"></i>candidate must have degree in Diploma/Btech or have experience related subject.</li>
+             <li><i class="fa fa-check-square-o" aria-hidden="true"></i>candidate should attach his/her updated resume in the carreer form.</li>
+            <li><i class="fa fa-check-square-o" aria-hidden="true"></i>we will respond your query as we get your details.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-md-6 offset-md-3 mt-5">
+    
+        <h1> Job Application Form</h1>
+        <form accept-charset="UTF-8" action="" method="POST" enctype="multipart/form-data" >
+          <div class="form-group">
+            <label for="exampleInputName">Full Name</label>
+            <input type="text" name="fullname" class="form-control" id="exampleInputName" placeholder="Enter your name and surname" required="required">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" required="required">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">City</label>
+              <input type="text" name="city" class="form-control" id="inputCity" placeholder="Gonda">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Zip</label>
+              <input type="text" name="zip" class="form-control" id="inputZip" placeholder="271001">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+            <div class="col-10">
+              <input class="form-control" name="tel" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="example-date-input" class="col-3 col-form-label">Start Date</label>
+            <div class="col-10">
+              <input class="form-control" name="starting_date" type="date" value="2020-02-01" id="example-date-input">
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label class="mr-4">Upload your CV:</label>
+            <input type="file" name="file">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+  </div>
+  <style>
+      .cssbuttons-io-button {
+ background: #A370F0;
+ color: white;
+ font-family: inherit;
+ padding: 0.35em;
+ padding-left: 1.2em;
+ font-size: 17px;
+ font-weight: 500;
+ border-radius: 0.9em;
+ border: none;
+ letter-spacing: 0.05em;
+ display: flex;
+ align-items: center;
+ box-shadow: inset 0 0 1.6em -0.6em #714da6;
+ overflow: hidden;
+ position: relative;
+ height: 2.8em;
+ padding-right: 3.3em;
+}
+
+.cssbuttons-io-button .icon {
+ background: white;
+ margin-left: 1em;
+ position: absolute;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 2.2em;
+ width: 2.2em;
+ border-radius: 0.7em;
+ box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+ right: 0.3em;
+ transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+ width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon i {
+ width: 1.1em;
+ transition: transform 0.3s;
+ color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon i {
+ transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+ transform: scale(0.95);
+}
+.my-list li{
+    list-style-type: none;
+}
+.my-list{
+    display: inline;
+    font-size: 1.2rem;
+    font-family: sans-serif, 'poppins';
+    font-weight: 1.4rem;
+    padding: 20px;
+}
+.my-list li i{
+    color:#5161ce;
+}
+  </style>
+{% endblock %}
